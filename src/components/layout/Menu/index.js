@@ -1,3 +1,5 @@
+import Dodecahedron from "~/components/helper/Dodecahedron";
+
 export default function Menu() {
   return (
     <div className="mil-menu-frame">
@@ -91,7 +93,9 @@ export default function Menu() {
                       className="mil-animation mil-position-1 mil-scale"
                       data-value-1="2"
                       data-value-2="2"
-                    ></div>
+                    >
+                      <Dodecahedron />
+                    </div>
                   </div>
                 </div>
                 <div className="mil-menu-right">

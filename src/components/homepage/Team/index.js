@@ -1,5 +1,6 @@
 // icons
 import { FaArrowRight } from "react-icons/fa6";
+import Lines from "~/components/helper/Lines";
 
 export default function Team() {
   return (
@@ -41,7 +42,9 @@ export default function Team() {
           </div>
           <div className="col-lg-6">
             <div className="mil-team-list">
-              <div className="mil-lines-place"></div>
+              <div className="mil-lines-place">
+                <Lines />
+              </div>
 
               <div className="row mil-mb-60">
                 <div className="col-sm-6">

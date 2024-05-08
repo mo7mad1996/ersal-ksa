@@ -1,12 +1,37 @@
 .hero {
-  overflow: hidden;
-  height: 100dvh;
+  background-color: black;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    content: "";
+    // make revese colors
+    backdrop-filter: invert(100%);
+  }
+
   .slider {
     background-position: center;
-    display: inline-block;
     height: 100dvh;
+    transform: translateX(100%);
     background-size: cover 100%;
     transition: 0.5s;
+    position: relative;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+
+      backdrop-filter: invert(100%);
+    }
 
     .content_container {
       display: flex;

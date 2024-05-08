@@ -1,6 +1,8 @@
 // icons
 import { FaArrowRight } from "react-icons/fa6";
 
+import Dodecahedron from "~/components/helper/Dodecahedron";
+
 export default function Services() {
   return (
     <section className="mil-dark-bg">
@@ -14,13 +16,17 @@ export default function Services() {
               top: "300px",
               left: "-100px",
             }}
-          ></div>
+          >
+            <Dodecahedron />
+          </div>
           <div
             className="mil-animation mil-position-2 mil-scale"
             data-value-1="2"
             data-value-2="1"
             style={{ left: "150px" }}
-          ></div>
+          >
+            <Dodecahedron />
+          </div>
         </div>
         <div className="container mil-p-120-0">
           <div className="mil-mb-120">

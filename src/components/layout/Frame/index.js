@@ -44,6 +44,7 @@ export default function Frame() {
       </div>
       <div className="mil-frame-bottom">
         <div className="mil-current-page"></div>
+
         <div className="mil-back-to-top">
           <a href="#top" className="mil-link mil-dark" ref={btn}>
             <span>الى الاعلى</span>

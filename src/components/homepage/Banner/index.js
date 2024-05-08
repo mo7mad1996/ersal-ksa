@@ -1,26 +1,38 @@
 // icons
 import { FaArrowRight } from "react-icons/fa6";
 
+// components
+import Dodecahedron from "~/components/helper/Dodecahedron";
+
 export default function Banner() {
+  const arr = [
+    {
+      a: 7,
+      b: 1.6,
+    },
+    {
+      a: 4,
+      b: 1,
+    },
+    {
+      a: 1.2,
+      b: 0.1,
+    },
+  ];
+
   return (
     <section className="mil-banner mil-dark-bg">
       <div className="mi-invert-fix">
         <div className="mil-animation-frame">
-          <div
-            className="mil-animation mil-position-1 mil-scale"
-            data-value-1="7"
-            data-value-2="1.6"
-          ></div>
-          <div
-            className="mil-animation mil-position-2 mil-scale"
-            data-value-1="4"
-            data-value-2="1"
-          ></div>
-          <div
-            className="mil-animation mil-position-3 mil-scale"
-            data-value-1="1.2"
-            data-value-2=".1"
-          ></div>
+          {arr.map((d, n) => (
+            <div
+              className={`mil-animation mil-position-${1 + n} mil-scale`}
+              data-value-1={d.a}
+              data-value-2={d.b}
+            >
+              <Dodecahedron />
+            </div>
+          ))}
         </div>
 
         <div className="mil-gradient"></div>

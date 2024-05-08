@@ -1,3 +1,5 @@
+import Lines from "~/components/helper/Lines";
+
 export default function About() {
   return (
     <section id="about">
@@ -27,7 +29,9 @@ export default function About() {
           </div>
           <div className="col-lg-5">
             <div className="mil-about-photo mil-mb-90">
-              <div className="mil-lines-place"></div>
+              <div className="mil-lines-place">
+                <Lines />
+              </div>
               <div
                 className="mil-up mil-img-frame"
                 style={{ paddingBottom: "160%" }}

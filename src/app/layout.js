@@ -26,25 +26,18 @@ import "~/assets/css/style.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="ar">
-      {/* <Head>
-        <link rel="stylesheet" href="/css/plugins/font-awesome.min.css" /> */}
-      {/* </Head> */}
       <body className={inter.className}>
         <div className="mil-wrapper" id="top">
           {/* preloader */}
-          <div>
-            <Cursor />
-            <Preloader />
-            <Scrollbar />
-            <Menu />
-            <Curtain />
-            <Frame />
-
-            {/* content */}
-            <div className="mil-content">
-              <div id="swupMain" className="mil-main-transition">
-                {children}
-              </div>
+          <Cursor />
+          <Preloader />
+          <Scrollbar />
+          <Menu />
+          <Curtain />
+          <Frame />
+          <div className="mil-content">
+            <div id="swupMain" className="mil-main-transition">
+              {children}
             </div>
           </div>
         </div>
