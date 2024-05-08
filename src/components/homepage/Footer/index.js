@@ -5,6 +5,11 @@ import { usePathname } from "next/navigation";
 
 // icons
 import { FaArrowRight } from "react-icons/fa6";
+import { TiSocialFacebook } from "react-icons/ti";
+import { RiTiktokLine } from "react-icons/ri";
+import { FaSnapchatSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { LuInstagram } from "react-icons/lu";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -48,6 +53,34 @@ export default function Footer() {
         title: "الوظائف",
       },
     ],
+  ];
+
+  const socal = [
+    {
+      title: "facebook",
+      url: "https://www.facebook.com/61559153827776",
+      icon: <TiSocialFacebook />,
+    },
+    {
+      title: "TikTok",
+      url: "https://www.tiktok.com/@ersalmarketingsolutions",
+      icon: <RiTiktokLine />,
+    },
+    {
+      title: "Snapchat",
+      url: "https://www.snapchat.com/add/ersal-marketing",
+      icon: <FaSnapchatSquare />,
+    },
+    {
+      title: "X",
+      url: "https://x.com/Ersal_ksa_",
+      icon: <FaXTwitter />,
+    },
+    {
+      title: "Instagram",
+      url: "https://www.instagram.com/ersal_marketing_agency",
+      icon: <LuInstagram />,
+    },
   ];
 
   return (
@@ -138,30 +171,22 @@ export default function Footer() {
               <div className="mil-vert-between">
                 <div className="mil-mb-30">
                   <ul className="mil-social-icons mil-up">
-                    <li>
-                      <a href="#." target="_blank" className="social-icon">
-                        <i className="fab fa-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#." target="_blank" className="social-icon">
-                        <i className="fab fa-dribbble"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#." target="_blank" className="social-icon">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#." target="_blank" className="social-icon">
-                        <i className="fab fa-github"></i>
-                      </a>
-                    </li>
+                    {socal.map((l) => (
+                      <li key={l.url}>
+                        <a
+                          href={l.url}
+                          target="_blank"
+                          title={l.title}
+                          className="social-icon"
+                        >
+                          {l.icon}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <p className="mil-light-soft mil-up">
-                  © جميع الحقوق محفوظه{new Date().getFullYear()} إرسال.
+                  © جميع الحقوق محفوظه | {new Date().getFullYear()} إرسال.
                 </p>
               </div>
             </div>

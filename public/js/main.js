@@ -46,16 +46,7 @@ $(document).on("click", 'a[href^="#"]', function (event) {
     400
   );
 });
-/***************************
 
-    append
-
-    ***************************/
-$(document).ready(function () {
-  $(".mil-main-menu ul li.mil-active > a")
-    .clone()
-    .appendTo(".mil-current-page");
-});
 /***************************
 
     accordion
@@ -555,16 +546,7 @@ document.addEventListener("swup:contentReplaced", function () {
   $(".mil-menu-btn").removeClass("mil-active");
   $(".mil-menu").removeClass("mil-active");
   $(".mil-menu-frame").removeClass("mil-active");
-  /***************************
 
-        append
-
-        ***************************/
-  $(document).ready(function () {
-    $(".mil-main-menu ul li.mil-active > a")
-      .clone()
-      .appendTo(".mil-current-page");
-  });
   /***************************
 
         accordion

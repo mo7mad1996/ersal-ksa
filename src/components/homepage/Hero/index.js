@@ -16,8 +16,8 @@ export default function Slider() {
 
   useEffect(() => {
     const sections = gsap.utils.toArray("." + css.slider_container);
-    sections.forEach((s, n) => {
-      ScrollTrigger.create({
+    const scrollTriggers = sections.map((s, n) => {
+      return ScrollTrigger.create({
         trigger: s,
         snap: true,
         start: "top top", // Set the trigger to top of the viewport
@@ -27,6 +27,8 @@ export default function Slider() {
         onEnterBack: () => s.nextElementSibling?.classList.remove(css.active),
       });
     });
+
+    return () => scrollTriggers.forEach((trigger) => trigger.kill());
   }, []);
 
   const sections = [

@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 // icons
 import { FaArrowRight } from "react-icons/fa6";
@@ -11,6 +11,7 @@ import Link from "next/link";
 
 export default function Frame() {
   const btn = useRef(null);
+  const [title, setPageTitle] = useState(document.title);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +34,14 @@ export default function Frame() {
     });
   }, []);
 
+  useEffect(() => {
+    const updatePageTitle = () => setPageTitle(document.title);
+
+    document.addEventListener("DOMSubtreeModified", updatePageTitle);
+    return () =>
+      document.removeEventListener("DOMSubtreeModified", updatePageTitle);
+  }, []);
+
   return (
     <div className="mil-frame">
       <div className="mil-frame-top">
@@ -44,7 +53,7 @@ export default function Frame() {
         </div>
       </div>
       <div className="mil-frame-bottom">
-        <div className="mil-current-page"></div>
+        <div className="mil-current-page">{title}</div>
 
         <div className="mil-back-to-top">
           <a href="#top" className="mil-link mil-dark" ref={btn}>
