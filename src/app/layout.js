@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="mil-wrapper" id="top">
           {/* preloader */}
-          <Cursor />
-          <Preloader />
-          <Scrollbar />
+          {/* <Cursor /> */}
+          {/* <Preloader /> */}
+          {/* <Scrollbar /> */}
           <Menu />
           <Curtain />
           <Frame />

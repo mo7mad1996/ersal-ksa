@@ -14,13 +14,15 @@ export default function Home() {
     <>
       {/* <Banner /> */}
       <Hero />
-      <About />
-      <Services />
-      {/* <Team /> */}
-      {/* <Reviews /> */}
-      {/* <Partners /> */}
-      <Blog />
-      <Footer />
+      <div style={{ background: "#fff", zIndex: 3, position: "relative" }}>
+        <About />
+        <Services />
+        {/* <Team /> */}
+        {/* <Reviews /> */}
+        {/* <Partners /> */}
+        <Blog />
+        <Footer />
+      </div>
     </>
   );
 }

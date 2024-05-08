@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from "react";
 import css from "./style.module.scss";
 
+// gsap
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -13,20 +14,17 @@ import img3 from "./images/slider/3.jpg";
 export default function Slider() {
   const container = useRef(null);
 
-  // data
   useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger);
-    const sections = gsap.utils.toArray("." + css.slider);
+    const sections = gsap.utils.toArray("." + css.slider_container);
     sections.forEach((s, n) => {
       ScrollTrigger.create({
         trigger: s,
-        start: "top 100%",
-        start: innerHeight + 1 + " bottom",
-        markers: true,
-        snap: 1,
-
+        snap: true,
+        start: "top top", // Set the trigger to top of the viewport
+        end: "bottom top", // Set the end to bottom of the viewport
+        // markers: true, // Add markers for debugging
         onEnter: () => s.nextElementSibling?.classList.add(css.active),
-        onLeaveBack: () => s.nextElementSibling?.classList.remove(css.active),
+        onEnterBack: () => s.nextElementSibling?.classList.remove(css.active),
       });
     });
   }, []);
@@ -56,18 +54,20 @@ export default function Slider() {
 
   const JSXsections = sections.map((section, n) => (
     <div
+      className={`${css.slider_container} ${n == 0 && css.active}`}
       key={section.id}
-      style={{
-        backgroundImage: `url(${section.img.src})`,
-      }}
-      className={`${css.slider} ${css.slider + section.id} ${
-        n == 0 && css.active
-      }`}
     >
-      <div className={`container ${css.content_container}`}>
-        <div className={css.contant}>
-          <h2>{section.title}</h2>
-          <p>{section.description}</p>
+      <div
+        style={{
+          backgroundImage: `url(${section.img.src})`,
+        }}
+        className={`${css.slider} `}
+      >
+        <div className={`container ${css.content_container}`}>
+          <div className={css.contant}>
+            <h2>{section.title}</h2>
+            <p>{section.description}</p>
+          </div>
         </div>
       </div>
     </div>
