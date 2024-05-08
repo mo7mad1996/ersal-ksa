@@ -14,7 +14,7 @@ export default function Home() {
     <>
       {/* <Banner /> */}
       <Hero />
-      <div style={{ background: "#fff", zIndex: 3, position: "relative" }}>
+      <div style={{ background: "#fff", zIndex: 1, position: "relative" }}>
         <About />
         <Services />
         {/* <Team /> */}
@@ -26,3 +26,7 @@ export default function Home() {
     </>
   );
 }
+
+export const metadata = {
+  title: "الرئيسية",
+};

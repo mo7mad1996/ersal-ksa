@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Dodecahedron from "~/components/helper/Dodecahedron";
 
 export default function Menu() {
@@ -5,9 +6,9 @@ export default function Menu() {
     <div className="mil-menu-frame">
       {/* <!-- frame clone --> */}
       <div className="mil-frame-top">
-        <a href="home-1.html" className="mil-logo">
+        <Link href="/" className="mil-logo">
           A.
-        </a>
+        </Link>
         <div className="mil-menu-btn">
           <span></span>
         </div>
@@ -23,7 +24,7 @@ export default function Menu() {
                     <a href="#."> الصفحة الرئسية</a>
                     <ul>
                       <li>
-                        <a href="home-1.html">الرئسية</a>
+                        <Link href="/">الرئسية</Link>
                       </li>
                       <li>
                         <a href="home-2.html">تواصل معانا</a>
@@ -57,10 +58,10 @@ export default function Menu() {
                     </ul>
                   </li>
                   <li className="mil-has-children">
-                    <a href="#.">الخدمات</a>
+                    <a href="#">الخدمات</a>
                     <ul>
                       <li>
-                        <a href="services.html">خدماتنا</a>
+                        <Link href="/services">خدماتنا</Link>
                       </li>
                       <li>
                         <a href="service.html">خدمة خاصة</a>

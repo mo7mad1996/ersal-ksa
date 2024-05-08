@@ -1,7 +1,55 @@
+"use client";
+// routing
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 // icons
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  const isActive = (path) => (pathname === path ? "mil-active" : "");
+
+  const nav = [
+    [
+      {
+        link: "/",
+        title: "الرئسية",
+      },
+      {
+        link: "#",
+        title: "اعمالنا",
+      },
+      {
+        link: "/services",
+        title: "خدماتنا",
+      },
+      {
+        link: "#",
+        title: "تواصل معنا",
+      },
+    ],
+    [
+      {
+        link: "#",
+        title: "سياسة الخصوصية",
+      },
+      {
+        link: "#",
+        title: "الأحكام والشروط",
+      },
+      {
+        link: "#",
+        title: "سياسة ملفات الارتباط",
+      },
+      {
+        link: "#",
+        title: "الوظائف",
+      },
+    ],
+  ];
+
   return (
     <footer className="mil-dark-bg">
       <div className="mi-invert-fix">
@@ -26,48 +74,38 @@ export default function Footer() {
                 </button>
               </form> */}
             </div>
+
             <div className="col-md-7 col-lg-6">
               <div className="row justify-content-end">
                 <div className="col-md-6 col-lg-7">
                   <nav className="mil-footer-menu mil-mb-60">
                     <ul>
-                      <li className="mil-up mil-active">
-                        <a href="home-1.html">الرئيسيه</a>
-                      </li>
-                      <li className="mil-up">
-                        <a href="portfolio-1.html">اعمالنا</a>
-                      </li>
-                      <li className="mil-up">
-                        <a href="services.html">خدماتنا</a>
-                      </li>
-                      <li className="mil-up">
-                        <a href="contact.html">تواصل معنا</a>
-                      </li>
+                      {nav[0].map((a) => (
+                        <li
+                          className={`mil-up  ${isActive(a.link)}`}
+                          title={a.title}
+                          key={a.link + Math.random()}
+                        >
+                          <Link className="mil-light-soft" href={a.link}>
+                            {a.title}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </nav>
                 </div>
                 <div className="col-md-6 col-lg-5">
                   <ul className="mil-menu-list mil-up mil-mb-60">
-                    <li>
-                      <a href="#." className="mil-light-soft">
-                        سياسة الخصوصية
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#." className="mil-light-soft">
-                        الأحكام والشروط
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#." className="mil-light-soft">
-                        سياسة ملفات الارتباط
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#." className="mil-light-soft">
-                        الوظائف
-                      </a>
-                    </li>
+                    {nav[1].map((a) => (
+                      <li
+                        key={a.link + Math.random()}
+                        className={isActive(a.link)}
+                      >
+                        <Link href={a.link} className="mil-light-soft">
+                          {a.title}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

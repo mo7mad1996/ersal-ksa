@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 // gsap
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 export default function Frame() {
   const btn = useRef(null);
@@ -35,9 +36,9 @@ export default function Frame() {
   return (
     <div className="mil-frame">
       <div className="mil-frame-top">
-        <a href="home-1.html" className="mil-logo">
+        <Link href="/" className="mil-logo">
           A.
-        </a>
+        </Link>
         <div className="mil-menu-btn">
           <span></span>
         </div>

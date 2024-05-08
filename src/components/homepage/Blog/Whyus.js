@@ -1,4 +1,5 @@
 // icons
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 export default function WhyUs() {
@@ -7,18 +8,22 @@ export default function WhyUs() {
       title: "خبرة احترافية",
       description:
         "موجود لدينا في إرسال فريق متكامل من ذوي الخبرة الاحترافية، لمساعدة الشركات في جميع الأنشطة التسويقية.",
+      href: "/",
     },
     {
       title: "خدمات متكاملة",
       description: `نقدم مجموعة كبيرة من الخدمات التسويقية لتلبية احتياجات الشركات، لأن ظهور تقنيات كثيرة يصبح من الصعب على الشركات إدارة نشاطها التسويقي، دون الاعتماد على خبراء متخصصين، وهنا يأتي دور إرسال في تقديم خدماتها الشاملة.      `,
+      href: "/services",
     },
     {
       title: "أسعار تنافسية",
       description: `نقدم مجموعة كبيرة من الخدمات التسويقية لتلبية احتياجات الشركات، لأن ظهور تقنيات كثيرة يصبح من الصعب على الشركات إدارة نشاطها التسويقي، دون الاعتماد على خبراء متخصصين، وهنا يأتي دور إرسال في تقديم خدماتها الشاملة.      `,
+      href: "/",
     },
     {
       title: "رؤية مسقبلية واعدة",
       description: ` نؤمن بأن مستقبل التسويق هو مستقبل رقمي مدعوم بالذكاء الصناعي، لتعزيز نمو الأعمال وتطويرها، وهذا دورنا في التركيز على تطوير حلول تسويقية فعالة تعتمد على الذكاء الصناعي، لدفع الشركات للنمو السريع، والوصول لجمهورهم المستهدف بسرعة وفعالية أكثر من الحلول التسويقية التقليدية.      `,
+      href: "/",
     },
   ];
 
@@ -26,7 +31,7 @@ export default function WhyUs() {
     <>
       {sections.map((section, n) => (
         <div className="col-lg-6" key={n}>
-          <a href="publication.html" className="mil-blog-card mil-mb-60">
+          <Link href={section.href} className="mil-blog-card mil-mb-60">
             {/* <div className="mil-cover-frame mil-up">
               <img src="img/blog/1.jpg" alt="cover" />
             </div> */}
@@ -47,7 +52,7 @@ export default function WhyUs() {
                 <FaArrowRight className="mil-arrow" />
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       ))}
     </>

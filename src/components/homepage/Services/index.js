@@ -1,4 +1,5 @@
 // icons
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 import Dodecahedron from "~/components/helper/Dodecahedron";
@@ -46,13 +47,13 @@ export default function Services() {
               </span>
             </div>
             <div className="mil-complex-text justify-content-center mil-up">
-              <a
-                href="services.html"
+              <Link
+                href="/services"
                 className="mil-services-button mil-button "
               >
                 <span>تعرف علينا اكثر</span>
                 <FaArrowRight className="mil-arrow" />
-              </a>
+              </Link>
               <h2 className="mil-h3 mil-muted mil-center">
                 <span className="mil-thin">تعرف على خدماتنا.</span>
               </h2>
@@ -67,7 +68,10 @@ export default function Services() {
 
           <div className="row mil-services-grid m-0">
             <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
-              <a href="service.html" className="mil-service-card-sm mil-up">
+              <Link
+                href="/services#E-Marketing"
+                className="mil-service-card-sm mil-up"
+              >
                 <h5 className="mil-muted mil-mb-30">
                   التسويق
                   <br />
@@ -80,10 +84,10 @@ export default function Services() {
                 <div className="mil-button mil-icon-button-sm ">
                   <FaArrowRight className="mil-arrow" />
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
-              <a href="service.html" className="mil-service-card-sm mil-up">
+              <Link href="/services#SEO" className="mil-service-card-sm mil-up">
                 <h5 className="mil-muted mil-mb-30">
                   تحسين
                   <br />
@@ -96,10 +100,13 @@ export default function Services() {
                 <div className="mil-button mil-icon-button-sm ">
                   <FaArrowRight className="mil-arrow" />
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
-              <a href="service.html" className="mil-service-card-sm mil-up">
+              <Link
+                href="/services#web-design"
+                className="mil-service-card-sm mil-up"
+              >
                 <h5 className="mil-muted mil-mb-30">
                   تصميم وتنفيذ
                   <br />
@@ -112,10 +119,13 @@ export default function Services() {
                 <div className="mil-button mil-icon-button-sm ">
                   <FaArrowRight className="mil-arrow" />
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
-              <a href="service.html" className="mil-service-card-sm mil-up">
+              <Link
+                href="/services#Visual-identity"
+                className="mil-service-card-sm mil-up"
+              >
                 <h5 className="mil-muted mil-mb-30">
                   تصميم وبناء
                   <br />
@@ -128,7 +138,7 @@ export default function Services() {
                 <div className="mil-button mil-icon-button-sm ">
                   <FaArrowRight className="mil-arrow" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

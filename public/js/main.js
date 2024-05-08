@@ -561,9 +561,6 @@ document.addEventListener("swup:contentReplaced", function () {
 
         ***************************/
   $(document).ready(function () {
-    $(
-      " .mil-arrow, .mil-animation .mil-dodecahedron, .mil-current-page a"
-    ).remove();
     $(".mil-main-menu ul li.mil-active > a")
       .clone()
       .appendTo(".mil-current-page");

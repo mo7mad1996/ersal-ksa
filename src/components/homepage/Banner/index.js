@@ -1,4 +1,5 @@
 // icons
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 // components
@@ -54,10 +55,10 @@ export default function Banner() {
               </div>
             </div>
 
-            <a href="services.html" className="mil-button  mil-btn-space">
+            <Link href="/services" className="mil-button  mil-btn-space">
               <span>What we do</span>
               <FaArrowRight className="mil-arrow" />
-            </a>
+            </Link>
 
             <a href="portfolio-1.html" className="mil-link mil-muted ">
               <span>View works</span>
