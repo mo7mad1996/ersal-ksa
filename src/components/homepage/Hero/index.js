@@ -21,11 +21,12 @@ export default function Slider() {
       ScrollTrigger.create({
         trigger: s,
         start: "top 100%",
+        start: innerHeight + 1 + " bottom",
         markers: true,
-        onEnter: () => s.classList.add(css.active),
         snap: 1,
-        onEnterBack: () => s.classList.remove(css.active),
-        // onEnter: () => s.classList.add(css.active),
+
+        onEnter: () => s.nextElementSibling?.classList.add(css.active),
+        onLeaveBack: () => s.nextElementSibling?.classList.remove(css.active),
       });
     });
   }, []);
@@ -59,7 +60,9 @@ export default function Slider() {
       style={{
         backgroundImage: `url(${section.img.src})`,
       }}
-      className={`${css.slider} ${css.slider + section.id}`}
+      className={`${css.slider} ${css.slider + section.id} ${
+        n == 0 && css.active
+      }`}
     >
       <div className={`container ${css.content_container}`}>
         <div className={css.contant}>
