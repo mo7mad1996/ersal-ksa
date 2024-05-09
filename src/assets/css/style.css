@@ -1682,7 +1682,7 @@ banner
 }
 
 .mil-banner-personal {
-  height: 100vh;
+  min-height: 100dvh;
   background-color: rgba(0, 0, 0, 0.1);
 }
 .mil-banner-personal .mil-banner-content {

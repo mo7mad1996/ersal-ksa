@@ -90,7 +90,7 @@ export default function Footer() {
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div className="mil-muted mil-logo mil-up mil-mb-30">
-                .ersal-ksa
+                .ersal.com.sa
               </div>
 
               {/* <p className="mil-light-soft mil-up mil-mb-30">

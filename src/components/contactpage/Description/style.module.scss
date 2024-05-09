@@ -1,0 +1,30 @@
+.form {
+  background-color: white;
+
+  textarea,
+  input {
+    font-family: inherit;
+    resize: vertical;
+    font-size: 16px;
+
+    &::placeholder {
+      font-size: inherit;
+    }
+  }
+
+  [type="submit"] {
+    font-size: inherit;
+    font-family: inherit;
+
+    padding: 7px 1em;
+    background-color: #0083ad;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      filter: brightness(120%);
+    }
+  }
+}
