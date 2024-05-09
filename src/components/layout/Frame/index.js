@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Frame() {
   const btn = useRef(null);
-  const [title, setPageTitle] = useState(document.title);
+  const [title, setPageTitle] = useState();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -36,6 +36,7 @@ export default function Frame() {
 
   useEffect(() => {
     const updatePageTitle = () => setPageTitle(document.title);
+    updatePageTitle();
 
     document.addEventListener("DOMSubtreeModified", updatePageTitle);
     return () =>

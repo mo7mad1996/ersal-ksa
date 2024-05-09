@@ -4,11 +4,11 @@ export default function Dodecahedron() {
       {Array(12)
         .fill(0)
         .map((d) => (
-          <div className="mil-pentagon">
+          <div className="mil-pentagon" key={Math.random()}>
             {Array(6)
               .fill(0)
               .map((d) => (
-                <div></div>
+                <div key={Math.random()}></div>
               ))}
           </div>
         ))}

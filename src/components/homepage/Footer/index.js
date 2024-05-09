@@ -31,7 +31,7 @@ export default function Footer() {
         title: "خدماتنا",
       },
       {
-        link: "#",
+        link: "/contact",
         title: "تواصل معنا",
       },
     ],

@@ -27,6 +27,7 @@ export default function Banner() {
         <div className="mil-animation-frame">
           {arr.map((d, n) => (
             <div
+              key={n}
               className={`mil-animation mil-position-${1 + n} mil-scale`}
               data-value-1={d.a}
               data-value-2={d.b}

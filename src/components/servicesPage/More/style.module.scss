@@ -1,3 +1,29 @@
 .more {
-  background-color: #3dadcb;
+  background-color: #060d5e;
+
+  a {
+    color: #0083ad;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      transition: 0.5s;
+      padding: 20px;
+      box-sizing: content-box;
+      margin-inline-end: 1em;
+    }
+
+    &:hover {
+      color: #37c4f2;
+
+      .icon {
+        scale: 1.5;
+      }
+    }
+  }
+
+  .action {
+    direction: ltr;
+    text-align: end;
+  }
 }

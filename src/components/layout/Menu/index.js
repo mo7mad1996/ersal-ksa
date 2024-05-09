@@ -76,7 +76,7 @@ export default function Menu() {
                         <a href="team.html">الفريق</a>
                       </li>
                       <li>
-                        <a href="contact.html">تواصل معنا</a>
+                        <Link href="/contact">تواصل معنا</Link>
                       </li>
                       <li>
                         <a href="404.html">من نحن</a>

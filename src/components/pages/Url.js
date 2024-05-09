@@ -1,7 +1,13 @@
+"use client";
+
 // css
 import css from "./style.module.scss";
 
+// nextjs components
 import Link from "next/link";
+
+// import { useRouter } from "next/router";
+// import { useEffect } from "react";
 
 export default function Description() {
   return (
