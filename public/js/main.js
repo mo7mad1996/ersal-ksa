@@ -255,16 +255,7 @@ $("body").mouseup(function () {
     ease: "sine",
   });
 });
-/***************************
 
-     menu
-
-    ***************************/
-$(".mil-menu-btn").on("click", function () {
-  $(".mil-menu-btn").toggleClass("mil-active");
-  $(".mil-menu").toggleClass("mil-active");
-  $(".mil-menu-frame").toggleClass("mil-active");
-});
 /***************************
 
     main menu
@@ -538,14 +529,6 @@ document.addEventListener("swup:contentReplaced", function () {
       Scrolltrigger.refresh();
     },
   });
-  /***************************
-
-         menu
-
-        ***************************/
-  $(".mil-menu-btn").removeClass("mil-active");
-  $(".mil-menu").removeClass("mil-active");
-  $(".mil-menu-frame").removeClass("mil-active");
 
   /***************************
 

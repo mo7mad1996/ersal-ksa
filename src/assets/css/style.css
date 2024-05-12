@@ -1682,7 +1682,7 @@ banner
 }
 
 .mil-banner-personal {
-  min-height: 100dvh;
+  /* min-height: 100dvh; */
   background-color: rgba(0, 0, 0, 0.1);
 }
 .mil-banner-personal .mil-banner-content {
@@ -1832,9 +1832,6 @@ banner
   opacity: 0.6;
 }
 @media screen and (max-width: 768px) {
-  .mil-portrait-frame {
-    height: 400px;
-  }
   .mil-portrait-frame img {
     -o-object-fit: cover;
     object-fit: cover;

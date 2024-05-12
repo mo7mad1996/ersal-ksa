@@ -89,7 +89,7 @@
 .container-sm {
   --bs-gutter-x: 30px;
   --bs-gutter-y: 0;
-  padding-left: var(--bs-gutter-x);
+  padding-right: var(--bs-gutter-x);
   padding-left: var(--bs-gutter-x);
   width: 100%;
   margin-inline-start: auto;
@@ -142,7 +142,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-inline-start: calc(-0.5 * var(--bs-gutter-x));
+  margin-inline-end: calc(-0.5 * var(--bs-gutter-x));
   margin-inline-start: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
@@ -150,7 +150,7 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }

@@ -84,13 +84,16 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="mil-dark-bg">
+    <footer
+      className="mil-dark-bg"
+      style={{ background: "white", position: "relative", zIndex: 1 }}
+    >
       <div className="mi-invert-fix">
         <div className="container mil-p-120-60">
           <div className="row justify-content-between">
             <div className="col-md-4 col-lg-4 mil-mb-60">
               <div className="mil-muted mil-logo mil-up mil-mb-30">
-                .ersal.com.sa
+                ersal.com.sa
               </div>
 
               {/* <p className="mil-light-soft mil-up mil-mb-30">
@@ -154,15 +157,16 @@ export default function Footer() {
                   </h6>
 
                   <p className="mil-light-soft mil-up">
-                    العنوان بالتفصيل
-                    <span className="mil-no-wrap">+51 174 705 812</span>
+                    <span className="mil-no-wrap">
+                      7755، طريق الامام علي بن ابي طالب ، 2357
+                    </span>
                   </p>
                 </div>
-                <div className="col-md-6 col-lg-5 mil-mb-60">
-                  <h6 className="mil-muted mil-up mil-mb-30">هاتف</h6>
+                <div className="col-lg-4 mil-mb-60">
+                  <h6 className="mil-muted mil-mb-30">هاتف</h6>
 
-                  <p className="mil-light-soft mil-up">
-                    <span className="mil-no-wrap">+31 174 705 811</span>
+                  <p className="mil-light-soft" style={{ direction: "ltr" }}>
+                    <span className="mil-no-wrap">+966 54 966 0007</span>
                   </p>
                 </div>
               </div>

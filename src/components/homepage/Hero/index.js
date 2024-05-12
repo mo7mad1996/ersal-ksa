@@ -56,7 +56,7 @@ export default function Slider() {
 
   const JSXsections = sections.map((section, n) => (
     <div
-      className={`${css.slider_container} ${n == 0 && css.active}`}
+      className={`${css.slider_container} ${n == 0 ? css.active : ""}`}
       key={section.id}
     >
       <div

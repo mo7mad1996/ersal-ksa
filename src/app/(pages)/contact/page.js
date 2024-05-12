@@ -1,14 +1,19 @@
 // components
 import Anmation from "~/components/contactpage/Anmation";
 import Description from "~/components/contactpage/Description";
-import Footer from "~/components/homepage/Footer";
+import More from "~/components/servicesPage/More";
 
 export default function ContactPage() {
   return (
     <section className="mil-banner-personal">
       <Anmation />
       <Description />
-      <Footer />
+      <More
+        links={[
+          { title: "من نحن", url: "/about" },
+          { title: "خدماتنا", url: "/about" },
+        ]}
+      />
     </section>
   );
 }

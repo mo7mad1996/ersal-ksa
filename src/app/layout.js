@@ -18,9 +18,12 @@ import Cursor from "~/components/layout/Cursor";
 import PlaceHolder from "~/components/layout/PlaceHolder";
 import Preloader from "~/components/layout/Preloader";
 import Scrollbar from "~/components/layout/Scrollbar";
-import Menu from "~/components/layout/Menu";
 import Curtain from "~/components/layout/Curtain";
-import Frame from "~/components/layout/Frame";
+import Frame_and_menu from "~/components/layout/Frame_and_menu";
+
+// Notifications
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // css
 import "~/assets/css/plugins/bootstrap-grid.css";
@@ -32,13 +35,13 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <body className={inter.className}>
         <div className="mil-wrapper" id="top">
-          {/* <Preloader /> */}
+          <Preloader />
           {/* <Cursor /> */}
-          {/* <PlaceHolder /> */}
+          <PlaceHolder />
           <Scrollbar />
-          <Menu />
-          {/* <Curtain /> */}
-          <Frame />
+          <Curtain />
+          <Frame_and_menu />
+
           <div className="mil-content">
             <div id="swupMain" className="mil-main-transition">
               {children}
@@ -46,8 +49,9 @@ export default function RootLayout({ children }) {
           </div>
         </div>
 
-        {/* js */}
-        <Script src="/js/plugins/jquery.min.js" />
+        <ToastContainer position="bottom-center" />
+
+        {/* <Script src="/js/plugins/jquery.min.js" />
         <Script src="/js/plugins/swup.min.js" />
         <Script src="/js/plugins/swiper.min.js" />
         <Script src="/js/plugins/fancybox.min.js" />
@@ -55,7 +59,7 @@ export default function RootLayout({ children }) {
         <Script src="/js/plugins/smooth-scroll.js" />
         <Script src="/js/plugins/Scrolltrigger.min.js" />
         <Script src="/js/plugins/ScrollTo.min.js" />
-        <Script src="/js/main.js" />
+        <Script src="/js/main.js" /> */}
       </body>
     </html>
   );

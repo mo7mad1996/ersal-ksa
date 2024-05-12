@@ -7,7 +7,6 @@ import Services from "~/components/homepage/Services";
 // import Reviews from "~/components/homepage/Reviews";
 // import Partners from "~/components/homepage/Partners";
 import Blog from "~/components/homepage/Blog";
-import Footer from "~/components/homepage/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
         {/* <Reviews /> */}
         {/* <Partners /> */}
         <Blog />
-        <Footer />
       </div>
     </>
   );

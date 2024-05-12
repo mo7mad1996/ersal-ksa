@@ -1,15 +1,137 @@
+"use client";
+
 import Link from "next/link";
 import Dodecahedron from "~/components/helper/Dodecahedron";
 
-export default function Menu() {
+// icons
+import { TiSocialFacebook } from "react-icons/ti";
+import { RiTiktokLine } from "react-icons/ri";
+import { FaSnapchatSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { LuInstagram } from "react-icons/lu";
+import { useState } from "react";
+
+export default function Menu({ openMenu, is_menu_open }) {
+  const links = [
+    {
+      name: "الصفحة الرئسية",
+      list: [
+        {
+          name: "الرئسية",
+          url: "/",
+        },
+        {
+          name: "تواصل معانا",
+          url: "/contact",
+        },
+        {
+          name: "من نحن",
+          url: "/about",
+        },
+      ],
+    },
+
+    {
+      name: "السوشيال ميديا",
+      list: [
+        {
+          name: "فيس بوك",
+          title: "facebook",
+          url: "https://www.facebook.com/61559153827776",
+          icon: <TiSocialFacebook />,
+        },
+        {
+          name: "تيك توك",
+          title: "TikTok",
+          url: "https://www.tiktok.com/@ersalmarketingsolutions",
+          icon: <RiTiktokLine />,
+        },
+        {
+          name: "سناب شات",
+          title: "Snapchat",
+          url: "https://www.snapchat.com/add/ersal-marketing",
+          icon: <FaSnapchatSquare />,
+        },
+        {
+          name: "X",
+          title: "X",
+          url: "https://x.com/Ersal_ksa_",
+          icon: <FaXTwitter />,
+        },
+        {
+          name: "انستجرام",
+          title: "Instagram",
+          url: "https://www.instagram.com/ersal_marketing_agency",
+          icon: <LuInstagram />,
+        },
+      ],
+    },
+
+    {
+      name: "الخدمات",
+      list: [
+        {
+          name: "خدماتنا",
+          url: "/services",
+        },
+        {
+          name: "طلب خدمة خاصه",
+          url: "/contact",
+        },
+      ],
+    },
+    {
+      name: "صفحاتنا ايضاً",
+      list: [
+        {
+          name: "الفريق",
+          url: "/team",
+        },
+        {
+          name: "تواصل معنا",
+          url: "/contact",
+        },
+        {
+          name: "من نحن",
+          url: "/about",
+        },
+      ],
+    },
+  ];
+
+  const local_Links = [
+    {
+      name: "إرسال",
+      list: [
+        { url: "/", title: "الموقع" },
+        { url: "#", title: "الموظفين" },
+        { url: "/contact", title: "رأيك يهمنا" },
+        { url: "#", title: "أسعارنا" },
+        { url: "#", title: "منتجاتنا" },
+      ],
+    },
+    {
+      name: "صفحات مفيدة",
+      list: [
+        { url: "#", title: "سياسة الاستخدام" },
+        { url: "/contact", title: "تواصل معنا" },
+        { url: "/about", title: "من نحن" },
+        { url: "#", title: "الوظائف" },
+      ],
+    },
+  ];
+
   return (
-    <div className="mil-menu-frame">
+    <div className={`mil-menu-frame ${is_menu_open ? "mil-active" : ""}`}>
       {/* <!-- frame clone --> */}
       <div className="mil-frame-top">
         <Link href="/" className="mil-logo">
           A.
         </Link>
-        <div className="mil-menu-btn">
+        <div
+          className={`mil-menu-btn ${is_menu_open ? "mil-active" : ""}`}
+          onClick={() => openMenu((e) => !e)}
+        >
           <span></span>
         </div>
       </div>
@@ -20,69 +142,9 @@ export default function Menu() {
             <div className="col-xl-5">
               <nav className="mil-main-menu" id="swupMenu">
                 <ul>
-                  <li className="mil-has-children mil-active">
-                    <a href="#."> الصفحة الرئسية</a>
-                    <ul>
-                      <li>
-                        <Link href="/">الرئسية</Link>
-                      </li>
-                      <li>
-                        <a href="home-2.html">تواصل معانا</a>
-                      </li>
-                      <li>
-                        <a href="portfolio-3.html">من نحن</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="mil-has-children">
-                    <a href="#.">السوشيال ميديا</a>
-                    <ul>
-                      <li>
-                        <a href="portfolio-1.html">فيس بوك</a>
-                      </li>
-                      <li>
-                        <a href="portfolio-2.html">يوتيوب</a>
-                      </li>
-                      <li>
-                        <a href="portfolio-3.html">انستجرام</a>
-                      </li>
-                      <li>
-                        <a href="portfolio-1.html">تيك توك</a>
-                      </li>
-                      <li>
-                        <a href="portfolio-2.html">تويتر</a>
-                      </li>
-                      <li>
-                        <a href="portfolio-3.html">سناب شات</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="mil-has-children">
-                    <a href="#">الخدمات</a>
-                    <ul>
-                      <li>
-                        <Link href="/services">خدماتنا</Link>
-                      </li>
-                      <li>
-                        <a href="service.html">خدمة خاصة</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li className="mil-has-children">
-                    <a href="#.">صفحاتنا ايضاً</a>
-                    <ul>
-                      <li>
-                        <a href="team.html">الفريق</a>
-                      </li>
-                      <li>
-                        <Link href="/contact">تواصل معنا</Link>
-                      </li>
-                      <li>
-                        <a href="404.html">من نحن</a>
-                      </li>
-                    </ul>
-                  </li>
+                  {links.map((main, n) => (
+                    <App_link key={n} {...main} openMenu={openMenu} />
+                  ))}
                 </ul>
               </nav>
             </div>
@@ -101,65 +163,29 @@ export default function Menu() {
                 </div>
                 <div className="mil-menu-right">
                   <div className="row">
-                    <div className="col-lg-8 mil-mb-60">
-                      <h6 className="mil-muted mil-mb-30">إرسال</h6>
+                    {local_Links.map((link, n) => (
+                      <div className="col-lg-4 mil-mb-60">
+                        <h6 className="mil-muted mil-mb-30 mil-no-wrap">
+                          {link.name}
+                        </h6>
 
-                      <ul className="mil-menu-list">
-                        <li>
-                          <a href="project-1.html" className="mil-light-soft">
-                            الموقع
-                          </a>
-                        </li>
-                        <li>
-                          <a href="project-2.html" className="mil-light-soft">
-                            الموظفين
-                          </a>
-                        </li>
-                        <li>
-                          <a href="project-3.html" className="mil-light-soft">
-                            رأيك يهمنا
-                          </a>
-                        </li>
-                        <li>
-                          <a href="project-4.html" className="mil-light-soft">
-                            أسعارنا
-                          </a>
-                        </li>
-                        <li>
-                          <a href="project-5.html" className="mil-light-soft">
-                            منتجاتنا
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-4 mil-mb-60">
-                      <h6 className="mil-muted mil-mb-30 mil-no-wrap">
-                        صفحات مفيدة
-                      </h6>
+                        <ul className="mil-menu-list">
+                          {link.list.map((l, b) => (
+                            <li
+                              onClick={(e) => {
+                                e.stopPropagation();
 
-                      <ul className="mil-menu-list">
-                        <li>
-                          <a href="#." className="mil-light-soft">
-                            سياسة الاستخدام
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#." className="mil-light-soft">
-                            تواصل معنا
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#." className="mil-light-soft">
-                            من نحن
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#." className="mil-light-soft">
-                            الوظائف
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                                openMenu(false);
+                              }}
+                            >
+                              <Link href={l.url} className="mil-light-soft">
+                                {l.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
                   <div className="mil-divider mil-mb-60"></div>
                   <div className="row justify-content-between">
@@ -169,14 +195,19 @@ export default function Menu() {
                       </h6>
 
                       <p className="mil-light-soft mil-up">
-                        <span className="mil-no-wrap">العنوان مفصل</span>
+                        <span className="mil-no-wrap">
+                          7755، طريق الامام علي بن ابي طالب ، 2357
+                        </span>
                       </p>
                     </div>
                     <div className="col-lg-4 mil-mb-60">
                       <h6 className="mil-muted mil-mb-30">هاتف</h6>
 
-                      <p className="mil-light-soft">
-                        <span className="mil-no-wrap">+31 174 705 811</span>
+                      <p
+                        className="mil-light-soft"
+                        style={{ direction: "ltr" }}
+                      >
+                        <span className="mil-no-wrap">+966 54 966 0007</span>
                       </p>
                     </div>
                   </div>
@@ -187,5 +218,27 @@ export default function Menu() {
         </div>
       </div>
     </div>
+  );
+}
+
+function App_link({ list, name, openMenu }) {
+  const [active, setActive] = useState(false);
+
+  return (
+    <li
+      className={`mil-has-children ${active ? "mil-active" : ""}`}
+      onClick={() => setActive((e) => !e)}
+    >
+      <a>{name}</a>
+      <ul className={active ? "mil-active" : ""}>
+        {list.map((li, a) => (
+          <li key={a}>
+            <Link href={li.url} onClick={() => openMenu(false)}>
+              <span> {li.name}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </li>
   );
 }

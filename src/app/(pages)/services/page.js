@@ -8,8 +8,12 @@ export default function Services_Page() {
     <>
       <PageDiscription />
       <Services />
-      <More />
-      <Footer />
+      <More
+        links={[
+          { title: "الرئسية", url: "/" },
+          { title: "اطلب خدمة", url: "/contact" },
+        ]}
+      />
     </>
   );
 }

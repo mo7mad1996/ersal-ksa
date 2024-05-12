@@ -6,14 +6,6 @@ export default function Description() {
     <div className="container pt-5">
       <div className="mil-banner-content mil-up  mt-5">
         <div className="row align-items-center">
-          <div className="col-lg-6">
-            <div className="mil-personal-text">
-              <h1 className="mil-mt-60">
-                تواصل <br />
-                معنا
-              </h1>
-            </div>
-          </div>
           <div className="row justify-content-center" id="form">
             <div className="col-lg-8">
               <span className="mil-suptitle mil-suptitle-dark mil-mb-60">

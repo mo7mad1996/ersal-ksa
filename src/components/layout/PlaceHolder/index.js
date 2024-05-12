@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 
 export default function Cursor() {
+  const [is_open, set_is_open] = useState(false);
   useEffect(() => {
+    set_is_open(true);
     var timeline = gsap.timeline();
 
     timeline.to(".mil-preloader-animation", {
@@ -102,7 +104,7 @@ export default function Cursor() {
         opacity: 1,
         scale: 1,
         onComplete: function () {
-          $(".mil-preloader").addClass("mil-hidden");
+          set_is_open(false);
         },
       },
       "-=1"
@@ -110,7 +112,7 @@ export default function Cursor() {
   }, []);
 
   return (
-    <div className="mil-preloader">
+    <div className={`mil-preloader ${is_open ? "" : "mil-hidden"}`}>
       <div className="mil-preloader-animation">
         <div className="mil-pos-abs mil-animation-1">
           <p className="mil-h3 mil-muted mil-thin">الابتكار</p>
@@ -123,7 +125,7 @@ export default function Cursor() {
         <div className="mil-pos-abs mil-animation-2">
           <div className="mil-reveal-frame">
             <p className="mil-reveal-box" />
-            <p className="mil-h3 mil-muted mil-thin">ersal-ksa.com</p>
+            <p className="mil-h3 mil-muted mil-thin">ersal.com.sa</p>
           </div>
         </div>
       </div>

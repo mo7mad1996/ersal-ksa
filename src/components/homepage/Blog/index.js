@@ -1,4 +1,5 @@
 // components
+import Link from "next/link";
 import WhyUs from "./Whyus";
 
 // icons
@@ -14,11 +15,11 @@ export default function Blog() {
           </div>
           <div className="col-lg-6 mil-mb-30">
             <div className="mil-adaptive-right mil-up">
-              <a href="blog.html" className="mil-link mil-dark ">
+              <Link href="/about" className="mil-link mil-dark ">
                 <span>المزيد</span>
 
                 <FaArrowRight className="mil-arrow" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

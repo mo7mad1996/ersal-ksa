@@ -9,10 +9,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 
-export default function Frame() {
+export default function Frame({ openMenu, is_menu_open }) {
+  // data
   const btn = useRef(null);
   const [title, setPageTitle] = useState();
 
+  // onload
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -43,13 +45,17 @@ export default function Frame() {
       document.removeEventListener("DOMSubtreeModified", updatePageTitle);
   }, []);
 
+  // JSX
   return (
     <div className="mil-frame">
       <div className="mil-frame-top">
         <Link href="/" className="mil-logo">
           A.
         </Link>
-        <div className="mil-menu-btn">
+        <div
+          className={`mil-menu-btn ${is_menu_open ? "mil-active" : ""}`}
+          onClick={() => openMenu((e) => !e)}
+        >
           <span></span>
         </div>
       </div>
