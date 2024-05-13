@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 
-export default function PreLoader() {
+export default function Preloader() {
   const [is_open, set_is_open] = useState(false);
   useEffect(() => {
     set_is_open(true);

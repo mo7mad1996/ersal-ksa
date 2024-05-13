@@ -16,7 +16,7 @@ export const metadata = {
 
 // components
 import Cursor from "~/components/layout/Cursor";
-import PreLoader from "~/components/layout/PreLoader";
+import PreLoader from "~/components/layout/Preloader";
 import Scrollbar from "~/components/layout/Scrollbar";
 import Curtain from "~/components/layout/Curtain";
 import Frame_and_menu from "~/components/layout/Frame_and_menu";
