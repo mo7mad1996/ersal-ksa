@@ -45,11 +45,11 @@ export default function Form() {
 
   // JSX
   return (
-    <form className={`${css.form} row p-5 mt-4 mb-4`} onSubmit={submit}>
-      <div className="col-6">
+    <form className={`${css.form} row p-lg-5 mt-4 mb-4`} onSubmit={submit}>
+      <div className="col-lg-6">
         <input name="client_name" onChange={update} placeholder="الاسم..." />
       </div>
-      <div className="col-6">
+      <div className="col-lg-6">
         <input
           name="client_number"
           onChange={update}

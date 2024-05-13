@@ -103,12 +103,12 @@ export default function Services() {
         <section className="mil-mb-90" id={s.tag} key={s.tag}>
           <div className="container">
             <h4 className="mil-breadcrumbs mil-h4 mil-center mil-mb-60 main-color">
-              {(n + 1).toString().padStart(2, 0)} . {s.title}
+              {(n + 1).toString().padStart(2, 0)} . {s.title}.
             </h4>
             <div className="line-start">
               {s.list.map((a) => (
                 <div key={a.title}>
-                  <h5 className="mil-up mil-mb-30">{a.title}</h5>
+                  <h5 className="mil-up mil-mb-30">{a.title}.</h5>
                   <p className="mil-up mil-mb-60">{a.description}</p>
                 </div>
               ))}

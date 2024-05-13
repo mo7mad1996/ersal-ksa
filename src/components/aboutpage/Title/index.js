@@ -18,8 +18,7 @@ export default function Title() {
             </li>
           </ul>
           <h3 className={css.title}>
-            شركة إرسال
-            <br />
+            شركة إرسال <br />
             <span className="mil-thin ml-mt-40">
               للخدمات والحلول التسويقية الشاملة
             </span>

@@ -9,8 +9,7 @@ export default function About() {
             <div className="mil-mb-90">
               <h2 className="mil-up mil-mb-60">
                 <span className="mil-thin"></span>
-                رؤيتنا في
-                <br />
+                رؤيتنا في <br />
                 إرسال
               </h2>
               <p className="mil-up mil-mb-30">

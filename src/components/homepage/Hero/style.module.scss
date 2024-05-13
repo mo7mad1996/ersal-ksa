@@ -9,6 +9,7 @@
 
     &.active {
       .slider {
+        // background-size: cover;
         width: 100%;
       }
     }
@@ -28,7 +29,8 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: max-content;
+        // padding: 10px;
+        width: fit-content;
         padding: 10px;
         overflow: hidden;
 

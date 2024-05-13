@@ -14,7 +14,7 @@
       transition: 0.5s;
       padding: 20px;
       box-sizing: content-box;
-      margin-inline-end: 1em;
+      margin-inline-end: min(1em, 1vw);
     }
 
     &:hover {

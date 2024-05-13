@@ -62,8 +62,7 @@ export default function Services() {
 
           <p className="mil-complex-text mil-muted  mil-h6 justify-content-center mil-center mil-thin mil-mb-120">
             هنا يأتي أهمية دورنا في تعزيز وجودك الإلكتروني، وتحقيق أهداف شركتك،
-            <br />
-            ولهذا السبب نقدم لك الخدمات والحلول التسويقية الشاملة:
+            <br /> ولهذا السبب نقدم لك الخدمات والحلول التسويقية الشاملة:
           </p>
 
           <div className="row mil-services-grid m-0">
@@ -73,8 +72,7 @@ export default function Services() {
                 className="mil-service-card-sm mil-up"
               >
                 <h5 className="mil-muted mil-mb-30">
-                  التسويق
-                  <br />
+                  التسويق <br />
                   الإلكتروني
                 </h5>
                 <p className="mil-light-soft mil-mb-30">
@@ -89,8 +87,7 @@ export default function Services() {
             <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
               <Link href="/services#SEO" className="mil-service-card-sm mil-up">
                 <h5 className="mil-muted mil-mb-30">
-                  تحسين
-                  <br />
+                  تحسين <br />
                   محركات البحث
                 </h5>
                 <p className="mil-light-soft mil-mb-30">
@@ -108,8 +105,7 @@ export default function Services() {
                 className="mil-service-card-sm mil-up"
               >
                 <h5 className="mil-muted mil-mb-30">
-                  تصميم وتنفيذ
-                  <br />
+                  تصميم وتنفيذ <br />
                   المواقع الإلكترونية
                 </h5>
                 <p className="mil-light-soft mil-mb-30">
@@ -127,8 +123,7 @@ export default function Services() {
                 className="mil-service-card-sm mil-up"
               >
                 <h5 className="mil-muted mil-mb-30">
-                  تصميم وبناء
-                  <br />
+                  تصميم وبناء <br />
                   الهوية البصرية
                 </h5>
                 <p className="mil-light-soft mil-mb-30">

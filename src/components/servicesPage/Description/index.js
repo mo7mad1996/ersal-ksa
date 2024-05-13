@@ -17,8 +17,7 @@ export default function Description() {
             </li>
           </ul>
           <h3 className={css.title}>
-            هنا يأتي أهمية دورنا في تعزيز وجودك الإلكتروني
-            <br />
+            هنا يأتي أهمية دورنا في تعزيز وجودك الإلكتروني <br />
             <span className="mil-thin ml-mt-40">
               وتحقيق أهداف شركتك، ولهذا السبب نقدم لك الخدمات والحلول التسويقية
               الشاملة
