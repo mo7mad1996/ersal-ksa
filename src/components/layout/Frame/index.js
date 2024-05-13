@@ -8,6 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Frame({ openMenu, is_menu_open }) {
   // data
@@ -50,7 +51,12 @@ export default function Frame({ openMenu, is_menu_open }) {
     <div className="mil-frame">
       <div className="mil-frame-top">
         <Link href="/" className="mil-logo">
-          A.
+          <Image
+            src="/img/logo.svg"
+            width={160}
+            height={80}
+            className="Ersal-logo"
+          />
         </Link>
         <div
           className={`mil-menu-btn ${is_menu_open ? "mil-active" : ""}`}

@@ -10,6 +10,7 @@ import { FaSnapchatSquare } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Menu({ openMenu, is_menu_open }) {
   const links = [
@@ -126,7 +127,12 @@ export default function Menu({ openMenu, is_menu_open }) {
       {/* <!-- frame clone --> */}
       <div className="mil-frame-top">
         <Link href="/" className="mil-logo">
-          A.
+          <Image
+            src="/img/logo.svg"
+            width={160}
+            height={80}
+            className="Ersal-logo"
+          />
         </Link>
         <div
           className={`mil-menu-btn ${is_menu_open ? "mil-active" : ""}`}

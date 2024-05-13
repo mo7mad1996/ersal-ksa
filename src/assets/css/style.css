@@ -1148,6 +1148,10 @@ scrollbar
 frame
 
 ------------------------------------------- */
+
+.Ersal-logo {
+  filter: drop-shadow(0 0 1px black);
+}
 .mil-logo {
   font-size: 42px;
   font-weight: 500;
