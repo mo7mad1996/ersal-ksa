@@ -14,10 +14,10 @@ import { useState } from "react";
 export default function Menu({ openMenu, is_menu_open }) {
   const links = [
     {
-      name: "الصفحة الرئسية",
+      name: "الصفحة الرئيسية",
       list: [
         {
-          name: "الرئسية",
+          name: "الرئيسية",
           url: "/",
         },
         {
@@ -164,7 +164,7 @@ export default function Menu({ openMenu, is_menu_open }) {
                 <div className="mil-menu-right">
                   <div className="row">
                     {local_Links.map((link, n) => (
-                      <div className="col-lg-4 mil-mb-60">
+                      <div className="col-lg-4 mil-mb-60" key={n}>
                         <h6 className="mil-muted mil-mb-30 mil-no-wrap">
                           {link.name}
                         </h6>
@@ -172,6 +172,7 @@ export default function Menu({ openMenu, is_menu_open }) {
                         <ul className="mil-menu-list">
                           {link.list.map((l, b) => (
                             <li
+                              key={b}
                               onClick={(e) => {
                                 e.stopPropagation();
 
@@ -222,8 +223,10 @@ export default function Menu({ openMenu, is_menu_open }) {
 }
 
 function App_link({ list, name, openMenu }) {
+  // data
   const [active, setActive] = useState(false);
 
+  // JSX
   return (
     <li
       className={`mil-has-children ${active ? "mil-active" : ""}`}

@@ -20,7 +20,7 @@ export default function Footer() {
     [
       {
         link: "/",
-        title: "الرئسية",
+        title: "الرئيسية",
       },
       {
         link: "#",
@@ -84,10 +84,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer
-      className="mil-dark-bg"
-      style={{ background: "white", position: "relative", zIndex: 1 }}
-    >
+    <footer className="mil-dark-bg" style={{ position: "relative", zIndex: 1 }}>
       <div className="mi-invert-fix">
         <div className="container mil-p-120-60">
           <div className="row justify-content-between">

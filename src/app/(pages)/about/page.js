@@ -13,7 +13,7 @@ export default function About_Page() {
       <Content />
       <More
         links={[
-          { title: "الرئسية", url: "/" },
+          { title: "الرئيسية", url: "/" },
           { title: "تواصل معنا", url: "/contact" },
         ]}
       />

@@ -1,4 +1,4 @@
-import Footer from "~/components/homepage/Footer";
+import Footer from "~/components/layout/Footer";
 
 export default function Pages_Layout({ children }) {
   return (

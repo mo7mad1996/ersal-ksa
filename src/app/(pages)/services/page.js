@@ -1,6 +1,6 @@
 import PageDiscription from "~/components/servicesPage/Description";
 import Services from "~/components/servicesPage/Services";
-import Footer from "~/components/homepage/Footer";
+import Footer from "~/components/layout/Footer";
 import More from "~/components/servicesPage/More";
 
 export default function Services_Page() {
@@ -10,7 +10,7 @@ export default function Services_Page() {
       <Services />
       <More
         links={[
-          { title: "الرئسية", url: "/" },
+          { title: "الرئيسية", url: "/" },
           { title: "اطلب خدمة", url: "/contact" },
         ]}
       />

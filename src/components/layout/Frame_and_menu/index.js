@@ -11,16 +11,16 @@ export default function Frame_and_menu() {
   // data
   const [is_menu_open, openMenu] = useState(false);
 
-  //   methods
+  // methods
   function reset() {
     openMenu(false);
   }
 
   // on inital
   useEffect(() => {
-    document.addEventListener("swup:contentReplaced", reset);
+    document.addEventListener("DOMSubtreeModified", reset);
 
-    return document.removeEventListener("swup:contentReplaced", reset);
+    return document.removeEventListener("DOMSubtreeModified", reset);
   });
 
   // JSX

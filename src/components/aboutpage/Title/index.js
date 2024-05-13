@@ -11,7 +11,7 @@ export default function Title() {
         <div className="container">
           <ul className="mil-breadcrumbs mil-center mil-mb-60">
             <li>
-              <Link href="/">الصفحة الرئسية</Link>
+              <Link href="/">الصفحة الرئيسية</Link>
             </li>
             <li>
               <Link href="/about">من نحن</Link>

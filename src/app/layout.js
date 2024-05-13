@@ -15,8 +15,7 @@ export const metadata = {
 
 // components
 import Cursor from "~/components/layout/Cursor";
-import PlaceHolder from "~/components/layout/PlaceHolder";
-import Preloader from "~/components/layout/Preloader";
+import PreLoader from "~/components/layout/PreLoader";
 import Scrollbar from "~/components/layout/Scrollbar";
 import Curtain from "~/components/layout/Curtain";
 import Frame_and_menu from "~/components/layout/Frame_and_menu";
@@ -35,9 +34,8 @@ export default function RootLayout({ children }) {
     <html lang="ar">
       <body className={inter.className}>
         <div className="mil-wrapper" id="top">
-          <Preloader />
-          {/* <Cursor /> */}
-          <PlaceHolder />
+          <Cursor />
+          {/* <PreLoader /> */}
           <Scrollbar />
           <Curtain />
           <Frame_and_menu />
