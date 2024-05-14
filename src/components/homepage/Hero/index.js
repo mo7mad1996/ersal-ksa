@@ -25,6 +25,7 @@ export default function Slider() {
         // markers: true, // Add markers for debugging
         onEnter: () => s.nextElementSibling?.classList.add(css.active),
         onEnterBack: () => s.nextElementSibling?.classList.remove(css.active),
+        onLeave: (e) => console.log(e),
       });
     });
 

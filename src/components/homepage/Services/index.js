@@ -42,9 +42,9 @@ export default function Services() {
 
             <div className="mil-complex-text justify-content-center mil-up mil-mb-15">
               <h2 className="mil-h2 mil-muted mil-center">خدمات إرسال</h2>
-              <span className="mil-text-image">
+              {/* <span className="mil-text-image">
                 <img src="img/photo/2.jpg" alt="team" />
-              </span>
+              </span> */}
             </div>
             <div className="mil-complex-text justify-content-center mil-up">
               <Link

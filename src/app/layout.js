@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="mil-wrapper" id="top">
           <Cursor />
-          <PreLoader />
+          {/* <PreLoader /> */}
           <Scrollbar />
           <Curtain />
           <Frame_and_menu />
