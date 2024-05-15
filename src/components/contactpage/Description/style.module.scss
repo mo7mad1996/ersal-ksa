@@ -31,10 +31,13 @@
   }
 
   .link {
-    margin-top: 2em;
+    text-align: center;
+    padding: 2em 0;
+    display: block;
     display: flex;
     gap: 1em;
     align-items: center;
+    justify-content: center;
 
     svg {
       font-size: 25px;
