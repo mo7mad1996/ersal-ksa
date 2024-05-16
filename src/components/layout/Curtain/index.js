@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Swup from "swup";
+// import Swup from "swup";
 
 export default function Curtain() {
-  const swup = new Swup();
+  // const swup = new Swup();
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
