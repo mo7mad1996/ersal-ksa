@@ -51,6 +51,7 @@ export default function Form() {
         <div className="col-lg-6">
           <input name="client_name" onChange={update} placeholder="الاسم..." />
         </div>
+
         <div className="col-lg-6">
           <input
             name="client_number"
@@ -58,6 +59,7 @@ export default function Form() {
             placeholder="رقم للتواصل..."
           />
         </div>
+
         <div className="col-12">
           <textarea
             autoFocus
@@ -99,6 +101,6 @@ function Map() {
       allowFullScreen=""
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
+    />
   );
 }

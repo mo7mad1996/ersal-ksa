@@ -20,12 +20,12 @@ export default function Slider() {
       return ScrollTrigger.create({
         trigger: s,
         snap: true,
-        start: "top top", // Set the trigger to top of the viewport
-        end: "bottom top", // Set the end to bottom of the viewport
-        // markers: true, // Add markers for debugging
+        scrub: 1,
+        start: "top top",
+        end: "bottom top",
         onEnter: () => s.nextElementSibling?.classList.add(css.active),
         onEnterBack: () => s.nextElementSibling?.classList.remove(css.active),
-        onLeave: (e) => console.log(e),
+        onLeave: () => console.log(s),
       });
     });
 

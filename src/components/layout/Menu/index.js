@@ -3,6 +3,9 @@
 import Link from "next/link";
 import Dodecahedron from "~/components/helper/Dodecahedron";
 
+// img
+import logo from "~/assets/img/logo.svg";
+
 // icons
 import { TiSocialFacebook } from "react-icons/ti";
 import { RiTiktokLine } from "react-icons/ri";
@@ -127,12 +130,7 @@ export default function Menu({ openMenu, is_menu_open }) {
       {/* <!-- frame clone --> */}
       <div className="mil-frame-top">
         <Link href="/" className="mil-logo">
-          <Image
-            src="/img/logo.svg"
-            width={160}
-            height={80}
-            className="Ersal-logo"
-          />
+          <Image src={logo} height={30} alt="ersal" className="Ersal-logo" />
         </Link>
         <div
           className={`mil-menu-btn ${is_menu_open ? "mil-active" : ""}`}

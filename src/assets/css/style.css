@@ -4168,7 +4168,7 @@ html.is-animating .mil-frame {
     opacity: 1;
   }
 }
-html.is-animating .mil-curtain {
+.mil-curtain.is-animating {
   opacity: 1;
   pointer-events: all;
 }

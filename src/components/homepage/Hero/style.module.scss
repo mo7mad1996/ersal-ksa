@@ -11,7 +11,6 @@
 
     &.active {
       .slider {
-        // background-size: cover;
         width: 100%;
       }
     }
@@ -53,13 +52,6 @@
           justify-content: center;
           gap: 1em;
           color: white;
-          // text-shadow: 0 0 2px black;
-
-          h2,
-          p {
-            // text-shadow: 0 0 4px black;
-            // backdrop-filter: sepia(90%) blur(4px);
-          }
 
           h2 {
             color: white;

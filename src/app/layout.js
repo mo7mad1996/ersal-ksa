@@ -56,7 +56,8 @@ export default function RootLayout({ children }) {
 
         <ToastContainer position="bottom-center" />
 
-        {/* <Script src="/js/plugins/jquery.min.js" />
+        {/* 
+        <Script src="/js/plugins/jquery.min.js" />
         <Script src="/js/plugins/swup.min.js" />
         <Script src="/js/plugins/swiper.min.js" />
         <Script src="/js/plugins/fancybox.min.js" />
@@ -64,7 +65,8 @@ export default function RootLayout({ children }) {
         <Script src="/js/plugins/smooth-scroll.js" />
         <Script src="/js/plugins/Scrolltrigger.min.js" />
         <Script src="/js/plugins/ScrollTo.min.js" />
-        <Script src="/js/main.js" /> */}
+        <Script src="/js/main.js" />
+         */}
       </body>
     </html>
   );

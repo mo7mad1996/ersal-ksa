@@ -4,6 +4,9 @@ import { useRef, useEffect, useState } from "react";
 // icons
 import { FaArrowRight } from "react-icons/fa6";
 
+// img
+import logo from "~/assets/img/logo.svg";
+
 // gsap
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -51,12 +54,7 @@ export default function Frame({ openMenu, is_menu_open }) {
     <div className="mil-frame">
       <div className="mil-frame-top">
         <Link href="/" className="mil-logo">
-          <Image
-            src="/img/logo.svg"
-            width={160}
-            height={80}
-            className="Ersal-logo"
-          />
+          <Image src={logo} height={30} alt="ersal" className="Ersal-logo" />
         </Link>
         <div
           className={`mil-menu-btn ${is_menu_open ? "mil-active" : ""}`}
