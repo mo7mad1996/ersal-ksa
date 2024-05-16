@@ -13,6 +13,9 @@ import img3 from "./images/slider/3.jpg";
 
 export default function Slider() {
   const container = useRef(null);
+  const [active, set_active] = useState(0);
+
+  useEffect(() => console.log(active), [active]);
 
   useEffect(() => {
     const sections = gsap.utils.toArray("." + css.slider_container);
@@ -23,9 +26,12 @@ export default function Slider() {
         scrub: 1,
         start: "top top",
         end: "bottom top",
-        onEnter: () => s.nextElementSibling?.classList.add(css.active),
-        onEnterBack: () => s.nextElementSibling?.classList.remove(css.active),
-        onLeave: () => console.log(s),
+        onEnter: () => set_active(n + 1),
+        // onLeave: () => set_active(n + 1),
+        onLeaveBack: () => set_active(n),
+        // onEnterBack: () => set_active(n),
+        // onUpdate: () => set_active(n),
+        onEnterBack: () => set_active(n),
       });
     });
 
@@ -57,7 +63,7 @@ export default function Slider() {
 
   const JSXsections = sections.map((section, n) => (
     <div
-      className={`${css.slider_container} ${n == 0 ? css.active : ""}`}
+      className={`${css.slider_container}  ${active + 1 > n ? css.active : ""}`}
       key={section.id}
     >
       <div
@@ -69,6 +75,11 @@ export default function Slider() {
         <div className={`container ${css.content_container}`}>
           <div className={css.contant}>
             <h2>{section.title}</h2>
+            {/* 
+            <h2>
+              {n} {active}
+            </h2> 
+            */}
             <p>{section.description}</p>
           </div>
         </div>
