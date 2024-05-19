@@ -117,7 +117,7 @@ export default function Menu({ openMenu, is_menu_open }) {
     {
       name: "صفحات مفيدة",
       list: [
-        { url: "#", title: "سياسة الاستخدام" },
+        { url: "/terms-and-conditions", title: "سياسة الاستخدام" },
         { url: "/contact", title: "تواصل معنا" },
         { url: "/about", title: "من نحن" },
         { url: "#", title: "الوظائف" },

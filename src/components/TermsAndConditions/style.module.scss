@@ -1,0 +1,50 @@
+.Intro {
+  margin: 5em 0;
+
+  p {
+    color: #333;
+    line-height: 1.1;
+    margin-bottom: 1em;
+  }
+}
+
+.item {
+  margin: 4em 0;
+
+  h3 {
+    font-size: 1.9em;
+  }
+
+  p {
+    padding: 0.5em 1em;
+    color: #333;
+    margin: 2em 0;
+    border-inline-start: 0.2em solid #031955;
+    line-height: 2;
+  }
+
+  ol,
+  ul {
+    padding-inline-start: 2em;
+    padding-block-start: 2em;
+    color: #031955;
+
+    li {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.fieldset {
+  padding: 2em;
+  border-radius: 5px;
+  margin: 1em;
+  line-height: 2;
+  border: 1px solid #031955;
+
+  legend {
+    border-radius: 5px;
+    padding: 0 1em;
+    border-inline: 1px solid #031955;
+  }
+}

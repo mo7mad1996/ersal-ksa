@@ -37,15 +37,15 @@ export default function Footer() {
     ],
     [
       {
-        link: "#",
+        link: "/policy",
         title: "سياسة الخصوصية",
       },
       {
-        link: "#",
+        link: "/terms-and-conditions",
         title: "الأحكام والشروط",
       },
       {
-        link: "#",
+        link: "/policy",
         title: "سياسة ملفات الارتباط",
       },
       {
