@@ -1,3 +1,6 @@
+import css from "./style.module.scss";
+import { LuHardDriveDownload } from "react-icons/lu";
+
 export default function Services() {
   const services = [
     {
@@ -33,6 +36,12 @@ export default function Services() {
           description: ` نعمل في هذه الخدمة على إنشاء مقاطع فيديو حركية جذابة، تُعزّز وجودك وتجذب انتباه الجمهور، لزيادة الانتشار السريع على وسائل التواصل الاجتماعي.`,
         },
       ],
+      files: [
+        {
+          title: "باقات اسعار إدارة منصات التواصل الاجتماعي",
+          url: "/download/باقات_ارسال_سوشيال_ميديا_بالاسعار.pdf",
+        },
+      ],
     },
     {
       tag: "SEO",
@@ -47,6 +56,7 @@ export default function Services() {
           description: `نقدم خدمات الإعلانات المدفوعة على محركات البحث، لزيادة الزوار على موقعك الإلكتروني، وزيادة مبيعاتك.`,
         },
       ],
+      files: [],
     },
     {
       tag: "Visual-identity",
@@ -61,6 +71,12 @@ export default function Services() {
           description: `نقدم لك أكثر من نسخة تصميم، ونمنحك خيارات كثيرة، ونأخذ بعين الاعتبار منافسينك.`,
         },
       ],
+      files: [
+        {
+          title: "خطط أسعار تصميم الهويه البصريه",
+          url: "/download /تصميم_هوبة_بصرية_كاملة.pdf",
+        },
+      ],
     },
     {
       tag: "web-design",
@@ -73,6 +89,16 @@ export default function Services() {
         {
           title: "اختيارات تصاميم متنوعة",
           description: `نقدم لك أكثر من نسخة تصميم، ونمنحك خيارات كثيرة، ونأخذ بعين الاعتبار منافسينك.`,
+        },
+      ],
+      files: [
+        {
+          title: "باقات الموقع التعريفي",
+          url: "/download/باقات_الموقع_التعريفي_البسيط_بالاسعار.pdf",
+        },
+        {
+          title: "باقات المتاجر الالكترونيه",
+          url: "/download/باقات_المتاجر_الالكترونية_بالاسعار.pdf",
         },
       ],
     },
@@ -111,6 +137,14 @@ export default function Services() {
                   <h5 className="mil-up mil-mb-30">{a.title}.</h5>
                   <p className="mil-up mil-mb-60">{a.description}</p>
                 </div>
+              ))}
+            </div>
+            <div className={css.prices}>
+              {s.files.map((file, n) => (
+                <a href={file.url} download key={n} className={css.item}>
+                  <span>{file.title}</span>
+                  <LuHardDriveDownload />
+                </a>
               ))}
             </div>
           </div>

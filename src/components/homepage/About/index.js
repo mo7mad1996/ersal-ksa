@@ -36,7 +36,6 @@ export default function About() {
                 style={{ paddingBottom: "160%" }}
               >
                 <img
-                  mil-scale
                   src="img/photo/1.jpg"
                   alt="img"
                   className="mil-scale"
